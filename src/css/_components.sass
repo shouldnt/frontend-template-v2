@@ -1,0 +1,30 @@
+@import 'components/fixedThumb'
+@import 'buttons/default'
+
+.title__
+	margin-bottom: 35px
+	display: table 
+	position: relative
+	&._center
+		margin-left: auto
+		margin-right: auto
+	.img 
+		img 
+			width: 520px
+	.text 
+		font-size: 32px
+		font-weight: 800
+		text-shadow: 0px 0px 12px rgba(177, 35, 140, 0.6)
+		color: #FFEDF6
+		position: absolute
+		top: 30%
+		left: 50%
+		transform: translateX(-45%)
+		white-space: nowrap
+	@media (max-width: 767.82px)
+		.img
+			img 
+				width: 400px
+		.text 
+			top: 33%
+			font-size: 20px

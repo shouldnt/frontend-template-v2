@@ -1,0 +1,132 @@
+.ham, .glam-ham
+	width: 20px
+	height: 20px
+	// background: green
+	position: relative
+	cursor: pointer
+	display: block
+	> div
+		background: $primary-color
+		width: 20px
+		height: 2px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: all .3s ease-in-out
+		&:before, &:after
+			content: ''
+			position: absolute
+			width: 20px
+			height: 2px
+			top: 7px
+			left: 0
+			background: $primary-color
+			transition: all .3s ease-in-out
+		&:after
+			top: -7px
+	&:not(.collapsed)
+		> div 
+			background: none
+			&:before, &:after 
+				top: 0
+				transform: rotate(45deg)	
+			&:after
+				transform: rotate(-45deg)	
+	
+.glam-ham
+	> div
+		background: #212121
+		&:before, &:after
+			background: #212121
+
+
+
+.site-header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background: #fff
+	border-bottom: 2px solid #B41E8E
+	z-index: 10
+	&-content 
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.logo 
+			padding: 10px 0
+		ul 
+			display: flex
+			align-items
+			li 
+				margin-left: 30px
+				&:first-child 
+					margin-left: 0
+				a 
+					display: block
+					padding: 32px 0
+					text-transform: uppercase
+					font-size: 15px
+					color: #8E1F63
+					font-weight: 600
+.mobile-toggle, .glam-mobile-toggle
+	z-index: 2
+	ul 
+		padding-top: 10px
+		li 
+			a 
+				display: block
+				padding: 15px 0
+				text-transform: uppercase
+				font-size: 15px
+				color: #8E1F63
+				font-weight: 600
+				text-align: center
+.glam-mobile-toggle 
+	position: absolute
+	top: 100%
+	width: 100%
+	left: 0
+	background: #fff
+	ul 
+		li 
+			a 
+				color: #333
+
+.glam-header
+	padding-top: 30px
+	position: relative
+	.logo
+		display: table 
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 20px
+		max-width: 250px
+	.nav 
+		display: flex
+		justify-content: center	
+		ul 
+			display: flex
+			justify-content: center
+			li 
+				a 
+					display: block
+					padding: 10px 25px
+					border-bottom: 2px solid transparent
+					color: #000
+					font-weight: 600
+					// text-transform: uppercase
+					&.active 
+						border-color: #333
+
+@media (max-width: 575.82px)
+	.glam-header 
+		padding: 10px 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.logo
+			max-width: 100px
+			margin-left: 0
+			margin-bottom: 0
